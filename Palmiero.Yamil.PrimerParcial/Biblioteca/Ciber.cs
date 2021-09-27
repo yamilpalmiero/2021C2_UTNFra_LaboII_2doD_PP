@@ -8,5 +8,9 @@ namespace Biblioteca
 {
     public class Ciber
     {
+        //ATRIBUTOS
+        private const string nombre = "El Vicio";
+        private List<Telefono> telefonos;
+        private List<Computadora> computadoras;
     }
 }
