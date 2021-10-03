@@ -1,7 +1,7 @@
 ﻿
 namespace Vista
 {
-    partial class Form1
+    partial class FormCiber
     {
         /// <summary>
         ///  Required designer variable.
@@ -29,10 +29,17 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.SuspendLayout();
+            // 
+            // FormCiber
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Text = "Form1";
+            this.ClientSize = new System.Drawing.Size(1103, 787);
+            this.Name = "FormCiber";
+            this.Text = "El Vicio de Yamil Palmiero 2°D";
+            this.ResumeLayout(false);
+
         }
 
         #endregion
