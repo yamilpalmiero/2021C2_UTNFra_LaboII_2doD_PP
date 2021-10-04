@@ -12,5 +12,20 @@ namespace Biblioteca
         private const string nombre = "El Vicio";
         private List<Telefono> telefonos;
         private List<Computadora> computadoras;
+
+
+        //CONSTRUCTORES
+        public Ciber(List<Telefono> telefonos, List<Computadora> computadoras)
+        {
+            this.telefonos = telefonos;
+            this.computadoras = computadoras;
+        }
+
+
+        //PROPIEDADES
+        public List<Llamada> Llamadas
+        {
+            get
+        }
     }
 }

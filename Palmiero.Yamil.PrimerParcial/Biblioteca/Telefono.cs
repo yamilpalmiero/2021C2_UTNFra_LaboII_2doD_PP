@@ -48,5 +48,20 @@ namespace Biblioteca
         {
             get { return this.llamadas; }
         }
+
+
+        //METODOS
+        public string MostrarLlamadas()
+        {
+            StringBuilder sb = new StringBuilder();
+
+            sb.AppendLine($"Llamadas: ");
+            foreach (Llamada item in llamadas)
+            {
+                sb.AppendLine(item.ToString());
+            }
+
+            return sb.ToString();
+        }
     }
 }
