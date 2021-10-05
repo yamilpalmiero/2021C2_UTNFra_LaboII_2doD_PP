@@ -29,16 +29,17 @@ namespace Vista
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormCiber));
             this.lblTitulo = new System.Windows.Forms.Label();
             this.lblNombre = new System.Windows.Forms.Label();
             this.lblApellido = new System.Windows.Forms.Label();
             this.lblEdad = new System.Windows.Forms.Label();
             this.lblDNI = new System.Windows.Forms.Label();
             this.gbCliente = new System.Windows.Forms.GroupBox();
-            this.txtNombre = new System.Windows.Forms.TextBox();
-            this.txtApellido = new System.Windows.Forms.TextBox();
-            this.txtDNI = new System.Windows.Forms.TextBox();
             this.nudEdad = new System.Windows.Forms.NumericUpDown();
+            this.txtDNI = new System.Windows.Forms.TextBox();
+            this.txtApellido = new System.Windows.Forms.TextBox();
+            this.txtNombre = new System.Windows.Forms.TextBox();
             this.rbtComputadora = new System.Windows.Forms.RadioButton();
             this.rbtTelefono = new System.Windows.Forms.RadioButton();
             this.btnComenzar = new System.Windows.Forms.Button();
@@ -46,20 +47,27 @@ namespace Vista
             this.cmbPerifericos = new System.Windows.Forms.ComboBox();
             this.cmbJuegos = new System.Windows.Forms.ComboBox();
             this.gpbServicio = new System.Windows.Forms.GroupBox();
-            this.lblSoftware = new System.Windows.Forms.Label();
-            this.lblPerifericos = new System.Windows.Forms.Label();
             this.lblJuegos = new System.Windows.Forms.Label();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.lblPerifericos = new System.Windows.Forms.Label();
+            this.lblSoftware = new System.Windows.Forms.Label();
+            this.rtbHistorial = new System.Windows.Forms.RichTextBox();
+            this.gpbEmpleado = new System.Windows.Forms.GroupBox();
+            this.rbtSi = new System.Windows.Forms.RadioButton();
+            this.rbtNo = new System.Windows.Forms.RadioButton();
+            this.lblLegajo = new System.Windows.Forms.Label();
+            this.txtLegajo = new System.Windows.Forms.TextBox();
             this.gbCliente.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).BeginInit();
             this.gpbServicio.SuspendLayout();
+            this.gpbEmpleado.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblTitulo
             // 
             this.lblTitulo.AutoSize = true;
-            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.lblTitulo.Location = new System.Drawing.Point(13, 9);
+            this.lblTitulo.Font = new System.Drawing.Font("Segoe UI", 25F, ((System.Drawing.FontStyle)(((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic) 
+                | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point);
+            this.lblTitulo.Location = new System.Drawing.Point(651, 9);
             this.lblTitulo.Name = "lblTitulo";
             this.lblTitulo.Size = new System.Drawing.Size(169, 57);
             this.lblTitulo.TabIndex = 0;
@@ -68,7 +76,7 @@ namespace Vista
             // lblNombre
             // 
             this.lblNombre.AutoSize = true;
-            this.lblNombre.Location = new System.Drawing.Point(23, 60);
+            this.lblNombre.Location = new System.Drawing.Point(13, 45);
             this.lblNombre.Name = "lblNombre";
             this.lblNombre.Size = new System.Drawing.Size(64, 20);
             this.lblNombre.TabIndex = 1;
@@ -77,7 +85,7 @@ namespace Vista
             // lblApellido
             // 
             this.lblApellido.AutoSize = true;
-            this.lblApellido.Location = new System.Drawing.Point(21, 103);
+            this.lblApellido.Location = new System.Drawing.Point(11, 88);
             this.lblApellido.Name = "lblApellido";
             this.lblApellido.Size = new System.Drawing.Size(66, 20);
             this.lblApellido.TabIndex = 2;
@@ -86,7 +94,7 @@ namespace Vista
             // lblEdad
             // 
             this.lblEdad.AutoSize = true;
-            this.lblEdad.Location = new System.Drawing.Point(44, 151);
+            this.lblEdad.Location = new System.Drawing.Point(34, 136);
             this.lblEdad.Name = "lblEdad";
             this.lblEdad.Size = new System.Drawing.Size(43, 20);
             this.lblEdad.TabIndex = 3;
@@ -95,7 +103,7 @@ namespace Vista
             // lblDNI
             // 
             this.lblDNI.AutoSize = true;
-            this.lblDNI.Location = new System.Drawing.Point(52, 199);
+            this.lblDNI.Location = new System.Drawing.Point(42, 184);
             this.lblDNI.Name = "lblDNI";
             this.lblDNI.Size = new System.Drawing.Size(35, 20);
             this.lblDNI.TabIndex = 4;
@@ -103,6 +111,7 @@ namespace Vista
             // 
             // gbCliente
             // 
+            this.gbCliente.Controls.Add(this.gpbEmpleado);
             this.gbCliente.Controls.Add(this.nudEdad);
             this.gbCliente.Controls.Add(this.txtDNI);
             this.gbCliente.Controls.Add(this.txtApellido);
@@ -111,45 +120,45 @@ namespace Vista
             this.gbCliente.Controls.Add(this.lblDNI);
             this.gbCliente.Controls.Add(this.lblApellido);
             this.gbCliente.Controls.Add(this.lblEdad);
-            this.gbCliente.Location = new System.Drawing.Point(12, 100);
+            this.gbCliente.Location = new System.Drawing.Point(13, 24);
             this.gbCliente.Name = "gbCliente";
-            this.gbCliente.Size = new System.Drawing.Size(473, 266);
+            this.gbCliente.Size = new System.Drawing.Size(473, 386);
             this.gbCliente.TabIndex = 5;
             this.gbCliente.TabStop = false;
             this.gbCliente.Text = "Cliente";
             // 
-            // txtNombre
-            // 
-            this.txtNombre.Location = new System.Drawing.Point(93, 53);
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Size = new System.Drawing.Size(346, 27);
-            this.txtNombre.TabIndex = 5;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.Location = new System.Drawing.Point(93, 100);
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Size = new System.Drawing.Size(346, 27);
-            this.txtApellido.TabIndex = 6;
-            // 
-            // txtDNI
-            // 
-            this.txtDNI.Location = new System.Drawing.Point(93, 196);
-            this.txtDNI.Name = "txtDNI";
-            this.txtDNI.Size = new System.Drawing.Size(346, 27);
-            this.txtDNI.TabIndex = 7;
-            // 
             // nudEdad
             // 
-            this.nudEdad.Location = new System.Drawing.Point(94, 151);
+            this.nudEdad.Location = new System.Drawing.Point(84, 136);
             this.nudEdad.Name = "nudEdad";
             this.nudEdad.Size = new System.Drawing.Size(345, 27);
             this.nudEdad.TabIndex = 8;
             // 
+            // txtDNI
+            // 
+            this.txtDNI.Location = new System.Drawing.Point(83, 181);
+            this.txtDNI.Name = "txtDNI";
+            this.txtDNI.Size = new System.Drawing.Size(346, 27);
+            this.txtDNI.TabIndex = 7;
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.Location = new System.Drawing.Point(83, 85);
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Size = new System.Drawing.Size(346, 27);
+            this.txtApellido.TabIndex = 6;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.Location = new System.Drawing.Point(83, 38);
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Size = new System.Drawing.Size(346, 27);
+            this.txtNombre.TabIndex = 5;
+            // 
             // rbtComputadora
             // 
             this.rbtComputadora.AutoSize = true;
-            this.rbtComputadora.Location = new System.Drawing.Point(21, 60);
+            this.rbtComputadora.Location = new System.Drawing.Point(13, 80);
             this.rbtComputadora.Name = "rbtComputadora";
             this.rbtComputadora.Size = new System.Drawing.Size(122, 24);
             this.rbtComputadora.TabIndex = 9;
@@ -160,7 +169,7 @@ namespace Vista
             // rbtTelefono
             // 
             this.rbtTelefono.AutoSize = true;
-            this.rbtTelefono.Location = new System.Drawing.Point(21, 30);
+            this.rbtTelefono.Location = new System.Drawing.Point(13, 50);
             this.rbtTelefono.Name = "rbtTelefono";
             this.rbtTelefono.Size = new System.Drawing.Size(88, 24);
             this.rbtTelefono.TabIndex = 10;
@@ -170,7 +179,7 @@ namespace Vista
             // 
             // btnComenzar
             // 
-            this.btnComenzar.Location = new System.Drawing.Point(12, 688);
+            this.btnComenzar.Location = new System.Drawing.Point(14, 724);
             this.btnComenzar.Name = "btnComenzar";
             this.btnComenzar.Size = new System.Drawing.Size(472, 58);
             this.btnComenzar.TabIndex = 11;
@@ -180,7 +189,7 @@ namespace Vista
             // cmbSoftware
             // 
             this.cmbSoftware.FormattingEnabled = true;
-            this.cmbSoftware.Location = new System.Drawing.Point(176, 104);
+            this.cmbSoftware.Location = new System.Drawing.Point(168, 124);
             this.cmbSoftware.Name = "cmbSoftware";
             this.cmbSoftware.Size = new System.Drawing.Size(263, 28);
             this.cmbSoftware.TabIndex = 12;
@@ -188,7 +197,7 @@ namespace Vista
             // cmbPerifericos
             // 
             this.cmbPerifericos.FormattingEnabled = true;
-            this.cmbPerifericos.Location = new System.Drawing.Point(176, 158);
+            this.cmbPerifericos.Location = new System.Drawing.Point(168, 178);
             this.cmbPerifericos.Name = "cmbPerifericos";
             this.cmbPerifericos.Size = new System.Drawing.Size(263, 28);
             this.cmbPerifericos.TabIndex = 13;
@@ -196,7 +205,7 @@ namespace Vista
             // cmbJuegos
             // 
             this.cmbJuegos.FormattingEnabled = true;
-            this.cmbJuegos.Location = new System.Drawing.Point(176, 209);
+            this.cmbJuegos.Location = new System.Drawing.Point(168, 229);
             this.cmbJuegos.Name = "cmbJuegos";
             this.cmbJuegos.Size = new System.Drawing.Size(263, 28);
             this.cmbJuegos.TabIndex = 14;
@@ -211,65 +220,121 @@ namespace Vista
             this.gpbServicio.Controls.Add(this.rbtTelefono);
             this.gpbServicio.Controls.Add(this.cmbSoftware);
             this.gpbServicio.Controls.Add(this.cmbPerifericos);
-            this.gpbServicio.Location = new System.Drawing.Point(13, 385);
+            this.gpbServicio.Location = new System.Drawing.Point(13, 431);
             this.gpbServicio.Name = "gpbServicio";
-            this.gpbServicio.Size = new System.Drawing.Size(472, 276);
+            this.gpbServicio.Size = new System.Drawing.Size(472, 272);
             this.gpbServicio.TabIndex = 15;
             this.gpbServicio.TabStop = false;
             this.gpbServicio.Text = "Servicio";
             // 
-            // lblSoftware
-            // 
-            this.lblSoftware.AutoSize = true;
-            this.lblSoftware.Location = new System.Drawing.Point(92, 107);
-            this.lblSoftware.Name = "lblSoftware";
-            this.lblSoftware.Size = new System.Drawing.Size(68, 20);
-            this.lblSoftware.TabIndex = 15;
-            this.lblSoftware.Text = "Software";
-            // 
-            // lblPerifericos
-            // 
-            this.lblPerifericos.AutoSize = true;
-            this.lblPerifericos.Location = new System.Drawing.Point(83, 161);
-            this.lblPerifericos.Name = "lblPerifericos";
-            this.lblPerifericos.Size = new System.Drawing.Size(77, 20);
-            this.lblPerifericos.TabIndex = 16;
-            this.lblPerifericos.Text = "Perifericos";
-            // 
             // lblJuegos
             // 
             this.lblJuegos.AutoSize = true;
-            this.lblJuegos.Location = new System.Drawing.Point(106, 212);
+            this.lblJuegos.Location = new System.Drawing.Point(98, 232);
             this.lblJuegos.Name = "lblJuegos";
             this.lblJuegos.Size = new System.Drawing.Size(54, 20);
             this.lblJuegos.TabIndex = 17;
             this.lblJuegos.Text = "Juegos";
             // 
-            // richTextBox1
+            // lblPerifericos
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(511, 100);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(450, 645);
-            this.richTextBox1.TabIndex = 16;
-            this.richTextBox1.Text = "";
+            this.lblPerifericos.AutoSize = true;
+            this.lblPerifericos.Location = new System.Drawing.Point(75, 181);
+            this.lblPerifericos.Name = "lblPerifericos";
+            this.lblPerifericos.Size = new System.Drawing.Size(77, 20);
+            this.lblPerifericos.TabIndex = 16;
+            this.lblPerifericos.Text = "Perifericos";
+            // 
+            // lblSoftware
+            // 
+            this.lblSoftware.AutoSize = true;
+            this.lblSoftware.Location = new System.Drawing.Point(84, 127);
+            this.lblSoftware.Name = "lblSoftware";
+            this.lblSoftware.Size = new System.Drawing.Size(68, 20);
+            this.lblSoftware.TabIndex = 15;
+            this.lblSoftware.Text = "Software";
+            // 
+            // rtbHistorial
+            // 
+            this.rtbHistorial.Location = new System.Drawing.Point(511, 100);
+            this.rtbHistorial.Name = "rtbHistorial";
+            this.rtbHistorial.Size = new System.Drawing.Size(450, 682);
+            this.rtbHistorial.TabIndex = 16;
+            this.rtbHistorial.Text = "";
+            // 
+            // gpbEmpleado
+            // 
+            this.gpbEmpleado.Controls.Add(this.txtLegajo);
+            this.gpbEmpleado.Controls.Add(this.lblLegajo);
+            this.gpbEmpleado.Controls.Add(this.rbtNo);
+            this.gpbEmpleado.Controls.Add(this.rbtSi);
+            this.gpbEmpleado.Location = new System.Drawing.Point(84, 234);
+            this.gpbEmpleado.Name = "gpbEmpleado";
+            this.gpbEmpleado.Size = new System.Drawing.Size(331, 129);
+            this.gpbEmpleado.TabIndex = 9;
+            this.gpbEmpleado.TabStop = false;
+            this.gpbEmpleado.Text = "Empleado";
+            // 
+            // rbtSi
+            // 
+            this.rbtSi.AutoSize = true;
+            this.rbtSi.Location = new System.Drawing.Point(18, 38);
+            this.rbtSi.Name = "rbtSi";
+            this.rbtSi.Size = new System.Drawing.Size(42, 24);
+            this.rbtSi.TabIndex = 0;
+            this.rbtSi.TabStop = true;
+            this.rbtSi.Text = "Si";
+            this.rbtSi.UseVisualStyleBackColor = true;
+            // 
+            // rbtNo
+            // 
+            this.rbtNo.AutoSize = true;
+            this.rbtNo.Location = new System.Drawing.Point(82, 38);
+            this.rbtNo.Name = "rbtNo";
+            this.rbtNo.Size = new System.Drawing.Size(50, 24);
+            this.rbtNo.TabIndex = 1;
+            this.rbtNo.TabStop = true;
+            this.rbtNo.Text = "No";
+            this.rbtNo.UseVisualStyleBackColor = true;
+            // 
+            // lblLegajo
+            // 
+            this.lblLegajo.AutoSize = true;
+            this.lblLegajo.Location = new System.Drawing.Point(18, 86);
+            this.lblLegajo.Name = "lblLegajo";
+            this.lblLegajo.Size = new System.Drawing.Size(54, 20);
+            this.lblLegajo.TabIndex = 2;
+            this.lblLegajo.Text = "Legajo";
+            // 
+            // txtLegajo
+            // 
+            this.txtLegajo.Location = new System.Drawing.Point(83, 83);
+            this.txtLegajo.Name = "txtLegajo";
+            this.txtLegajo.Size = new System.Drawing.Size(203, 27);
+            this.txtLegajo.TabIndex = 8;
             // 
             // FormCiber
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(981, 769);
-            this.Controls.Add(this.richTextBox1);
+            this.ClientSize = new System.Drawing.Size(981, 798);
+            this.Controls.Add(this.rtbHistorial);
             this.Controls.Add(this.gpbServicio);
             this.Controls.Add(this.gbCliente);
             this.Controls.Add(this.lblTitulo);
             this.Controls.Add(this.btnComenzar);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormCiber";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "El Vicio de Yamil Palmiero 2°D";
             this.gbCliente.ResumeLayout(false);
             this.gbCliente.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.nudEdad)).EndInit();
             this.gpbServicio.ResumeLayout(false);
             this.gpbServicio.PerformLayout();
+            this.gpbEmpleado.ResumeLayout(false);
+            this.gpbEmpleado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -297,7 +362,12 @@ namespace Vista
         private System.Windows.Forms.Label lblJuegos;
         private System.Windows.Forms.Label lblPerifericos;
         private System.Windows.Forms.Label lblSoftware;
-        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox rtbHistorial;
+        private System.Windows.Forms.GroupBox gpbEmpleado;
+        private System.Windows.Forms.TextBox txtLegajo;
+        private System.Windows.Forms.Label lblLegajo;
+        private System.Windows.Forms.RadioButton rbtNo;
+        private System.Windows.Forms.RadioButton rbtSi;
     }
 }
 

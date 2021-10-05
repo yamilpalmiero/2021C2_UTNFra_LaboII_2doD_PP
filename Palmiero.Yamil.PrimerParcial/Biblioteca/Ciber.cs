@@ -15,17 +15,21 @@ namespace Biblioteca
 
 
         //CONSTRUCTORES
-        public Ciber(List<Telefono> telefonos, List<Computadora> computadoras)
+        public Ciber()
         {
-            this.telefonos = telefonos;
-            this.computadoras = computadoras;
+            this.telefonos = new List<Telefono>();
+            this.computadoras = new List<Computadora>();
         }
 
 
         //PROPIEDADES
-        public List<Llamada> Llamadas
+        public List<Telefono> Telefonos
         {
-            get
+            get { return this.telefonos; }
+        }
+        public List<Computadora> Computadoras
+        {
+            get { return this.computadoras; }
         }
     }
 }

@@ -23,6 +23,7 @@ namespace Biblioteca
             this.juegos = new List<string>();
         }
         public Computadora(string id, string procesador, short ram, string placa)
+            : this()
         {
             this.id = id;
             this.procesador = procesador;

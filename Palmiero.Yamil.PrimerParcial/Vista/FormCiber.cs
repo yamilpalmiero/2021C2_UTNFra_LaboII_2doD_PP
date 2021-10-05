@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Biblioteca;
+
 namespace Vista
 {
     public partial class FormCiber : Form
