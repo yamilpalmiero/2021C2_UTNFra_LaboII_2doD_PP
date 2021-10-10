@@ -14,12 +14,12 @@ namespace Biblioteca
 
         //CONSTRUCTORES
         public Local(Llamada llamada, float costo)
-            : this(llamada.Origen, llamada.Duracion, llamada.Destino, costo)
+            : this(llamada.Duracion, llamada.Destino, costo)
         {
 
         }
-        public Local(string origen, float duracion, string destino, float costo)
-            : base(duracion, destino, origen)
+        public Local(float duracion, string destino, float costo)
+            : base(duracion, destino)
         {
             this.costo = costo;
         }

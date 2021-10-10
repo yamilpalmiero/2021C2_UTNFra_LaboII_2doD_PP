@@ -20,15 +20,13 @@ namespace Biblioteca
         //ATRIBUTOS
         protected float duracion;
         protected string destino;
-        protected string origen;
 
 
         //CONSTRUCTORES
-        protected Llamada(float duracion, string destino, string origen)
+        protected Llamada(float duracion, string destino)
         {
             this.duracion = duracion;
             this.destino = destino;
-            this.origen = origen;
         }
 
 
@@ -39,11 +37,7 @@ namespace Biblioteca
         }
         public string Destino
         {
-            get { return this.origen; }
-        }
-        public string Origen
-        {
-            get { return this.origen; }
+            get { return this.destino; }
         }
 
         public abstract float CostoLlamada { get; }
@@ -56,7 +50,6 @@ namespace Biblioteca
 
             sb.AppendLine($"Duracion: {this.Duracion}");
             sb.AppendLine($"Destino: {this.Destino}");
-            sb.AppendLine($"Origen: {this.Origen}");
 
             return sb.ToString();
         }

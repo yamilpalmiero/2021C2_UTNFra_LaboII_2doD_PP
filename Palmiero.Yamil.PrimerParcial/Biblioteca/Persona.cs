@@ -11,17 +11,13 @@ namespace Biblioteca
         //ATRIBUTOS 
         private string nombre;
         private string apellido;
-        private short edad;
-        private int dni;
 
 
         //CONSTRUCTOR
-        public Persona(string nombre, string apellido, short edad, int dni)
+        public Persona(string nombre, string apellido)
         {
             this.nombre = nombre;
             this.apellido = apellido;
-            this.edad = edad;
-            this.dni = dni;
         }
 
 
@@ -36,26 +32,14 @@ namespace Biblioteca
             get { return this.apellido; }
             set { this.apellido = value; }
         }
-        public short Edad
-        {
-            get { return this.edad; }
-            set { this.edad = value; }
-        }
-        public int Dni
-        {
-            get { return this.dni; }
-            set { this.dni = value; }
-        }
 
 
         //METODOS
-        protected string MostrarDatos()
+        protected virtual string MostrarDatos()
         {
             StringBuilder sb = new StringBuilder();
 
             sb.AppendLine($"Nombre: {this.nombre} {this.apellido}");
-            sb.AppendLine($"Edad: {this.edad}");
-            sb.AppendLine($"DNI: {this.dni}");
 
             return sb.ToString();
         }

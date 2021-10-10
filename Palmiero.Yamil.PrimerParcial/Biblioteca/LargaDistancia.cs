@@ -14,12 +14,7 @@ namespace Biblioteca
 
         //CONSTRUCTORES
         public LargaDistancia(Llamada llamada, float costo)
-            : this(llamada.Origen, llamada.Duracion, llamada.Destino, costo)
-        {
-
-        }
-        public LargaDistancia(string origen, float duracion, string destino, float costo)
-            : base(duracion, destino, origen)
+            : base(llamada.Duracion, llamada.Destino)
         {
             this.costo = costo;
         }
