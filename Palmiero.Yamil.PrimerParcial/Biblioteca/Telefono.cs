@@ -19,6 +19,7 @@ namespace Biblioteca
         //ATRIBUTOS
         private string id;
         private string marca;
+        private TipoTelefono tipo;
         private List<Llamada> llamadas;
 
 
@@ -28,10 +29,12 @@ namespace Biblioteca
             this.llamadas = new List<Llamada>();
         }
 
-        public Telefono(string id, string marca)
+        public Telefono(string id, string marca, TipoTelefono tipo)
+            : this()
         {
             this.id = id;
             this.marca = marca;
+            this.tipo = tipo;
         }
 
 
